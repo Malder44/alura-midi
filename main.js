@@ -1,5 +1,11 @@
 function tocaSom(idElementoAudio) {
-    document.querySelector(idElementoAudio).play();
+    const elemento = document.querySelector(idElementoAudio);
+
+    if(elemento != null && elemento.localName == 'audio') {
+        elemento.play();
+    } else {
+        alert('Elemento inválido');
+    }
 }
 
 function adicionaEstilo(tecla) {
